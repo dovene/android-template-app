@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+
+    <color name="light_divider">#1effffff</color>
+
+    <color name="black_transparent">#0f000000</color>
+    <color name="dark_divider">#1e000000</color>
+    <color name="dark_text_disabled_hint">#4c000000</color>
+    <color name="dark_text_secondary">#89000000</color>
+    <color name="dark_text">#dd000000</color>
+
+    <color name="blur_color">#20000000</color>
+    <color name="blur">#80000000</color>
+
+    <color name="light_white_text_disabled_hint">#4cffffff</color>
+    <color name="light_white_text_secondary">#89ffffff</color>
+    <color name="light_white_tab_unselected">#b3ffffff</color>
+    <color name="light_white_text">#ddffffff</color>
+
+    <color name="light_focused_background">#33999999</color>
+    <color name="light_pressed_background">#33999999</color>
+
+
+    <color name="material_indigo">#3F51B5</color>
+    <color name="material_blue">#2196F3</color>
+    <color name="material_light_blue">#03A9F4</color>
+    <color name="transparent_grey">#55000000</color>
+
+    <color name="main">#280303</color>
+
+
+
+
+    <color name="dark_blue">#3F51B5</color>
+    <color name="darker_blue">#303F9F</color>
+    <color name="blue">#2196F3</color>
+    <color name="blue_best">#0198E1</color>
+    <color name="light_blue">#03A9F4</color>
+    <!-- Shimmer loading -->
+    <color name="shimmerLoading">#cccccc</color>
+    <color name="shimmer_background">#bbbbbb</color>
+
+    <color name="colorGrey">#858585</color>
+    <color name="colorGrey1">#737373</color>
+    <color name="colorGrey2">#4F4F4F</color>
+    <color name="colorRed2">#F90101</color>
+</resources>

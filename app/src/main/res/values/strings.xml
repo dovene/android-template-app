@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Template App</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="email">Saisir votre email</string>
+    <string name="pass">Saisir votre mot de passe</string>
+    <string name="login">Connexion</string>
+    <string name="app_title">Movie Party</string>
+    <string name="root_url">https://api.themoviedb.org/</string>
+    <string name="image_url">https://image.tmdb.org/t/p/w500/</string>
+    <string name="popularity">Popularité : </string>
+</resources>
