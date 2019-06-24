@@ -61,8 +61,6 @@ class MovieDetailFragment : BaseFragment() {
 
         Glide.with(this.context!!)
             .load(movie?.getImageUrl(this.context!!))
-            .centerCrop()
-            .fitCenter()
             .diskCacheStrategy(DiskCacheStrategy.DATA)
             .into(image)
         titleTV?.text = movie?.title
