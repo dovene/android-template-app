@@ -1,1 +1,1 @@
-# TemplateAndroidApp is an Android Template App
+# This project is an Android Template App
