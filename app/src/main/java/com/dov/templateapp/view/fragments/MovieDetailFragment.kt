@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.dov.templateapp.R
 import com.dov.templateapp.databinding.DetailMovieFragmentBinding
 import com.dov.templateapp.model.Movie
@@ -40,6 +41,7 @@ class MovieDetailFragment : BaseFragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        setHasOptionsMenu(true)
         binding = DataBindingUtil.inflate(
             inflater, R.layout.detail_movie_fragment, container, false
         )
@@ -59,6 +61,9 @@ class MovieDetailFragment : BaseFragment() {
 
         Glide.with(this.context!!)
             .load(movie?.getImageUrl(this.context!!))
+            .centerCrop()
+            .fitCenter()
+            .diskCacheStrategy(DiskCacheStrategy.DATA)
             .into(image)
         titleTV?.text = movie?.title
         categoryTV?.text = movie?.getPopularity(this.context!!).toString()

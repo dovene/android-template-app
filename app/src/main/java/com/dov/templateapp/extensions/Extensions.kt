@@ -21,7 +21,7 @@ fun BaseActivity.replaceFragment(fragment: Fragment, frameId: Int) {
     supportFragmentManager.beginTransaction().replace(frameId, fragment).addToBackStack(null).commit()
 }
 
-fun Context.displayMessage(message: String) {
+fun Context.displayToastMessage(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_LONG).show()
 }
 

@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.dov.templateapp.R
 import com.dov.templateapp.model.Movie
 import getImageUrl
@@ -45,6 +46,7 @@ class MoviesAdapter(val context: Context, val callback: (Movie) -> Unit
         holder.releaseTV?.text = movie?.release_date
         Glide.with(holder.imageTV?.context!!)
             .load(movie?.getImageUrl(holder.imageTV?.context!!))
+            .diskCacheStrategy(DiskCacheStrategy.DATA)
             .into(holder.imageTV)
         holder.itemHolder.setOnClickListener {
             callback(movie!!)
