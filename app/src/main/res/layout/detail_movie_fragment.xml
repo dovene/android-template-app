@@ -180,7 +180,8 @@
                 android:onClick="@{()-> movieDetailFragmentViewModel.onFabClicked()}"
                 app:layout_anchor="@id/appbar"
                 app:layout_anchorGravity="bottom|end"
-                app:srcCompat="@android:drawable/ic_menu_share"/>
+                app:backgroundTint="@color/colorRed2"
+                app:srcCompat="@drawable/share"/>
 
     </android.support.design.widget.CoordinatorLayout>
 </layout>
