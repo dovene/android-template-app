@@ -6,3 +6,5 @@ the three main types of view you may have to use while building an app namely a 
 Furthermore this app implements reactive programming through MVVM pattern.
 
 Kotlin, LiveData, ViewModel, Databinding, Dagger, RxJava, Retrofit, Timber, Glide are main technical features used for mixing this app.
+
+And for those who enjoys both the taste of a lollipop and an apple you may find the same project developed in iOS right here https://github.com/dovene/TemplateiOSApp.
