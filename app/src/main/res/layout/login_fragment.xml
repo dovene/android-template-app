@@ -1,119 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
+
         <variable
                 name="loginFragmentViewModel"
                 type="com.dov.templateapp.viewmodel.LoginFragmentViewModel" />
     </data>
-<android.support.constraint.ConstraintLayout
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".view.activities.LoginActivity"
-        android:id="@+id/container"
-        android:background="@color/main">
 
-
-
-
-
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/container"
             android:layout_width="match_parent"
-            android:id="@+id/titleTV"
-            android:textSize="26dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/center_holder"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:text="@string/app_title"
+            android:layout_height="match_parent"
+            android:background="@color/main"
+            tools:context=".view.activities.LoginActivity">
 
-            android:layout_marginBottom="60dp"/>
-
-    <android.support.constraint.ConstraintLayout
-            android:id="@+id/center_holder"
-            android:layout_width="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_height="wrap_content">
-
-
-        <android.support.constraint.ConstraintLayout
-                android:id="@+id/input_holder"
-                app:layout_constraintTop_toTopOf="parent"
-
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/rounded_backgroung"
-                android:layout_marginEnd="@dimen/vertical_big_margin"
-                android:layout_marginStart="@dimen/vertical_big_margin"
-
-        >
-
-            <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/emailTV"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:hint="@string/email"
-                    android:layout_marginStart="@dimen/vertical_margin"
-                    android:layout_marginLeft="@dimen/vertical_margin"
-                    android:layout_marginEnd="@dimen/vertical_margin"
-                    android:layout_marginRight="@dimen/vertical_margin"
-                    android:text="@={loginFragmentViewModel.mail}"
-                    android:inputType="text"
-                    app:backgroundTint="@color/white"/>
-
-            <View android:layout_width="match_parent"
-                  android:id="@+id/divider"
-                  android:background="@color/dark_divider"
-                  app:layout_constraintTop_toBottomOf="@id/emailTV"
-                  android:layout_height="1dp"
-            />
-
-
-            <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/passTV"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    app:layout_constraintTop_toBottomOf="@id/emailTV"
-                    android:hint="@string/pass"
-                    android:text="@={loginFragmentViewModel.password}"
-                    app:backgroundTint="@color/white"
-                    android:layout_marginStart="@dimen/vertical_margin"
-                    android:layout_marginLeft="@dimen/vertical_margin"
-                    android:layout_marginEnd="@dimen/vertical_margin"
-                    android:inputType="text"
-                    android:layout_marginRight="@dimen/vertical_margin"/>
-
-            <View android:layout_width="match_parent"
-                  android:id="@+id/divider2"
-                  android:background="@color/dark_divider"
-                  app:layout_constraintTop_toBottomOf="@id/emailTV"
-                  android:layout_height="1dp"/>
-
-        </android.support.constraint.ConstraintLayout>
-
-        <android.support.v7.widget.AppCompatButton
-                android:layout_marginTop="@dimen/vertical_margin"
-                android:layout_width="match_parent"
-                android:text="@string/login"
-                android:background="@drawable/rounded_backgroung"
-                android:layout_marginEnd="@dimen/vertical_big_margin"
-                android:layout_marginStart="@dimen/vertical_big_margin"
-                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
                 android:gravity="center"
-                android:textColor="@color/main"
-                android:onClick="@{()-> loginFragmentViewModel.onLoginButtonClicked()}"
-                app:layout_constraintTop_toBottomOf="@id/input_holder"/>
+                android:text="@string/app_title"
+                android:textColor="@color/white"
+                android:textSize="26dp"
+                android:textStyle="bold"
 
-    </android.support.constraint.ConstraintLayout>
-    <android.support.v7.widget.AppCompatImageView android:layout_width="match_parent"
-                                                  android:layout_height="200dp"
-                                                  android:scaleType="centerCrop"
-                                                  app:layout_constraintBottom_toBottomOf="parent"
-                                                  android:src="@drawable/movies"
-    />
-</android.support.constraint.ConstraintLayout>
+                app:layout_constraintBottom_toTopOf="@+id/center_holder" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/center_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/input_holder"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/vertical_big_margin"
+                    android:layout_marginEnd="@dimen/vertical_big_margin"
+                    android:background="@drawable/rounded_backgroung"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/emailTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="@dimen/vertical_margin"
+                        android:layout_marginLeft="@dimen/vertical_margin"
+                        android:layout_marginEnd="@dimen/vertical_margin"
+                        android:layout_marginRight="@dimen/vertical_margin"
+                        android:hint="@string/email"
+                        android:inputType="text"
+                        android:text="@={loginFragmentViewModel.mail}"
+                        app:backgroundTint="@color/white"
+                        android:imeOptions="actionDone"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_divider"
+                        app:layout_constraintTop_toBottomOf="@id/emailTV" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/passTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="@dimen/vertical_margin"
+                        android:layout_marginLeft="@dimen/vertical_margin"
+                        android:layout_marginEnd="@dimen/vertical_margin"
+                        android:layout_marginRight="@dimen/vertical_margin"
+                        android:hint="@string/pass"
+                        android:inputType="text"
+                        android:text="@={loginFragmentViewModel.password}"
+                        app:backgroundTint="@color/white"
+                        android:imeOptions="actionDone"
+                        app:layout_constraintTop_toBottomOf="@id/emailTV" />
+
+                <View
+                        android:id="@+id/divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_divider"
+                        app:layout_constraintTop_toBottomOf="@id/emailTV" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/vertical_big_margin"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    android:layout_marginEnd="@dimen/vertical_big_margin"
+                    app:layout_constraintTop_toBottomOf="@id/input_holder">
+                <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/loginBT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_backgroung"
+                        android:gravity="center"
+                        android:onClick="@{()-> loginFragmentViewModel.onLoginButtonClicked()}"
+                        android:text="@string/login"
+                        android:textColor="@color/main"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@color/white">
+                </ProgressBar>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/movies"
+                app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -12,8 +12,8 @@ import java.util.concurrent.TimeUnit
 
 class BaseServiceHelper {
     companion object {
-        private const val SERVICE_CONNECTION_TIMEOUT: Long = 20
-        private const val SERVICE_READ_TIMEOUT: Long = 40
+        private const val SERVICE_CONNECTION_TIMEOUT: Long = 5
+        private const val SERVICE_READ_TIMEOUT: Long = 20
 
         /**
          * Returns an httpClient for Retrofit

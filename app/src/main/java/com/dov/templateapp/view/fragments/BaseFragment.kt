@@ -1,7 +1,7 @@
 package com.dov.templateapp.view.fragments
 
 import android.content.Context
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import com.dov.templateapp.di.helper.Injectable
 import com.dov.templateapp.view.activities.BaseActivity
 import com.dov.templateapp.viewmodel.ViewModelFactory

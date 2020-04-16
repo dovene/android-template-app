@@ -1,8 +1,8 @@
 package com.dov.templateapp.paginationdata
 
 import android.app.Application
-import android.arch.lifecycle.MutableLiveData
-import android.arch.paging.PositionalDataSource
+import androidx.lifecycle.MutableLiveData
+import androidx.paging.PositionalDataSource
 import com.dov.templateapp.application.TemplateApplication
 import com.dov.templateapp.model.Movie
 import com.dov.templateapp.model.ResourceWrapper

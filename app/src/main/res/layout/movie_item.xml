@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
                                     xmlns:app="http://schemas.android.com/apk/res-auto"
                                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                                     android:layout_width="match_parent"
@@ -8,30 +8,30 @@
                                     android:id="@+id/itemHolder"
                                     android:layout_margin="@dimen/vertical_margin">
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/movies"
             android:id="@+id/imageTV"
             android:scaleType="centerCrop"/>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:background="@color/blur"
             android:layout_height="match_parent"/>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="@dimen/vertical_margin">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/titleTV"
                     android:layout_width="wrap_content"
                     android:text="@string/app_name"
@@ -47,7 +47,7 @@
                     style="@style/titleStyle"
                     app:layout_constraintTop_toTopOf="parent"/>
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/releaseDateTV"
                     android:layout_width="wrap_content"
                     android:text="@string/app_name"
@@ -62,7 +62,7 @@
                     style="@style/releaseDateStyle"
                     app:layout_constraintTop_toBottomOf="@id/titleTV"/>
 
-            <android.support.v7.widget.AppCompatTextView android:layout_width="match_parent"
+            <androidx.appcompat.widget.AppCompatTextView android:layout_width="match_parent"
                                                          android:layout_height="wrap_content"
                                                          android:text="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLoremIpsumLoremIpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum"
                                                          android:textColor="@color/white"
@@ -80,10 +80,10 @@
                                                          app:layout_constraintTop_toBottomOf="@id/releaseDateTV"/>
 
 
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-          </android.support.constraint.ConstraintLayout>
+          </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>
