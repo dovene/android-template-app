@@ -112,4 +112,8 @@ dependencies {
 
     // Mockito framework
     testImplementation 'org.mockito:mockito-core:1.10.19'
+
+    // Swipe refresh layout
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+
 }

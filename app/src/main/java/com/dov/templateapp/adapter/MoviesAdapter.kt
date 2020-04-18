@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.dov.templateapp.R
@@ -44,9 +45,17 @@ class MoviesAdapter(val context: Context, val callback: (Movie) -> Unit
         holder.titleTV?.text = movie?.title
         holder.descriptionTV?.text = movie?.overview
         holder.releaseTV?.text = movie?.release_date
+
+        val circularProgressDrawable = CircularProgressDrawable(holder.itemView.context)
+        circularProgressDrawable.strokeWidth = 5f
+        circularProgressDrawable.centerRadius = 30f
+        circularProgressDrawable.start()
+
+
         Glide.with(holder.imageTV?.context!!)
             .load(movie?.getImageUrl(holder.imageTV?.context!!))
             .diskCacheStrategy(DiskCacheStrategy.DATA)
+            .placeholder(circularProgressDrawable)
             .into(holder.imageTV)
         holder.itemHolder.setOnClickListener {
             callback(movie!!)
